@@ -1,0 +1,21 @@
+/* The file encoding is Windows-1251 */
+
+:main
+pln Можно либо активировать кнопки выбора напрямую, либо нажать соответствующую цифровую клавишу на клавиатуре.
+btn 1, Первая кнопка
+btn 2, Вторая кнопка
+btn 3, Третья кнопка
+end
+
+:1
+goto message
+
+:2
+goto message
+
+:3
+goto message
+
+:message
+pln Вы активировали кнопку № #%previous_loc$.
+goto main
