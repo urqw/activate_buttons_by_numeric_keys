@@ -1,5 +1,6 @@
 /**
- * Copyright (C) 2018 Nikita Tseykovets <tseikovets@rambler.ru>
+ * Copyright (C) 2018, 2019 Nikita Tseykovets <tseikovets@rambler.ru>
+ * Copyright (C) narmiel (UrqW project from which part of code is borrowed)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,12 +16,23 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-var target = document.getElementById('buttons');
+Client.prototype.drawButtons = function() {
+	var me = this;
+	this.crtlButtonField.empty();
 
-// Implementing hotkeys for buttons
+	$.each(GlobalPlayer.buttons, function(index, button) {
+		if (button) {
+			var buttonCtrl = $('<button class="list-group-item button">').attr('data-action', button.id).html('<b>' + (index + 1) + ':</b> ' + button.desc);
+
+			me.crtlButtonField.append(buttonCtrl);
+		}
+	});
+};
+
+var target = document.getElementById('buttons');
 document.addEventListener('keydown', function(event) {
 	var number = event.key;
-	if(number== 0) {
+	if(number == 0) {
 		number = 10;
 	}
 	if(number >= 1 && number <= 10) {
@@ -30,15 +42,3 @@ document.addEventListener('keydown', function(event) {
 		}
 	}
 });
-
-// Automatic number assignment to buttons
-var observer = new MutationObserver(function(mutations) {
-	var buttons = target.getElementsByTagName('button'), n = buttons.length;
-	if(n > 0) {
-		for(var i = 0; i < n; i++) {
-			buttons[i].innerHTML = '<b>'+(i+1)+':</b> '+buttons[i].innerHTML;
-		}
-	}
-});
-var config = { childList: true }
-observer.observe(target, config);

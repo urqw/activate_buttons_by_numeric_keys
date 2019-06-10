@@ -1,6 +1,6 @@
 # Activate buttons by numeric keys
 
-*Версия от 29.09.2018 для UrqW 1.0.*
+*Версия от 10.06.2019 для UrqW 1.0.*
 
 Плагин для [UrqW](https://github.com/narmiel/UrqW),
 автоматически номерующий кнопки выбора
