@@ -1,3 +1,8 @@
+This project is documented and conducted in Russian
+due to its focus on a Russian-speaking audience.
+
+<div lang="ru">
+
 # Activate buttons by numeric keys
 
 *Версия от 10.06.2019 для UrqW 1.0.*
@@ -28,3 +33,11 @@ btn налево, Идти налево
 Вы можете заархивировать папку с плагином и тестовым файлом .qst,
 добавить этот архив в UrqW как любую другую игру
 и на практике ознакомиться с работой плагина.
+
+Другие плагины для UrqW см. в
+[общем репозитории](https://github.com/tseykovets/UrqW_plugins).
+
+Однако будьте осторожны: не все плагины UrqW могут быть легко скомбинированы
+посредством копирования их кода в один файл.
+
+</div>
