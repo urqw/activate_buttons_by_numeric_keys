@@ -1,6 +1,7 @@
 /**
  * Copyright (C) 2018, 2019 Nikita Tseykovets <tseikovets@rambler.ru>
- * Copyright (C) narmiel (UrqW project from which part of code is borrowed)
+ * Copyright (C) 2015, 2016 Akela <akela88@bk.ru>
+ *     (UrqW project from which part of code is borrowed)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +17,11 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
+/**
+ * Modifying buttons drawing function
+ * from UrqW (/js/Client.js)
+ * to buttons numbering
+ */
 Client.prototype.drawButtons = function() {
 	var me = this;
 	this.crtlButtonField.empty();
